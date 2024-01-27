@@ -221,7 +221,6 @@ GameObject:
   m_Component:
   - component: {fileID: 4152347686797632402}
   - component: {fileID: 6994156736152000059}
-  - component: {fileID: 4448963755592088599}
   m_Layer: 6
   m_Name: FootCollider
   m_TagString: Untagged
@@ -267,19 +266,6 @@ CapsuleCollider:
   m_Height: 0.18725745
   m_Direction: 1
   m_Center: {x: 0, y: 0, z: 0}
---- !u!114 &4448963755592088599
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2807840045607923694}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8ba92cc2114b181458f1e94ebb4c47f0, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  isCollideWithGround: 0
 --- !u!1 &3544354108241154950
 GameObject:
   m_ObjectHideFlags: 0
@@ -679,7 +665,6 @@ GameObject:
   m_Component:
   - component: {fileID: 2530470023551662349}
   - component: {fileID: 6138028110699919065}
-  - component: {fileID: 363139770475077339}
   m_Layer: 6
   m_Name: FootCollider
   m_TagString: Untagged
@@ -725,19 +710,6 @@ CapsuleCollider:
   m_Height: 0.18725745
   m_Direction: 1
   m_Center: {x: 0, y: 0, z: 0}
---- !u!114 &363139770475077339
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5104358460077841751}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8ba92cc2114b181458f1e94ebb4c47f0, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  isCollideWithGround: 0
 --- !u!1 &5418771935539697071
 GameObject:
   m_ObjectHideFlags: 0
@@ -994,7 +966,7 @@ MonoBehaviour:
   startPositionObject: {fileID: 1866960462309208462}
   moveDuration: 0.04
   playerRigidbody: {fileID: 8860954088025893166}
-  kickForce: 20
+  kickForce: 40
   checkRadius: 0.5
   defaultLayerMask:
     serializedVersion: 2
@@ -1318,7 +1290,7 @@ PrefabInstance:
     - target: {fileID: -8679921383154817045, guid: 200cb89e0073f8947a224fd863511b72,
         type: 3}
       propertyPath: m_RootOrder
-      value: 3
+      value: 13
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 200cb89e0073f8947a224fd863511b72,
         type: 3}
@@ -2540,7 +2512,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7890871779958558637}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: cb432b19f0d31324abd27932815bab2e, type: 3}
   m_Name: 
