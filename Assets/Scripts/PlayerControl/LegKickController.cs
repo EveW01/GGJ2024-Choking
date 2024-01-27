@@ -50,24 +50,26 @@ public class LegKickController : MonoBehaviour
         float elapsedTime = 0;
         Vector3 originalPosition = transform.localPosition;
         bool isKicking = targetPosition == endPosition; // 判断是否为蹬腿动作
+        bool hasAppliedForce = false; // 是否已经施加过力
 
         while (elapsedTime < moveDuration)
         {
             transform.localPosition = Vector3.Lerp(originalPosition, targetPosition, (elapsedTime / moveDuration));
             elapsedTime += Time.deltaTime;
+
+            // 如果是蹬腿动作并且脚部与地面发生碰撞，且尚未施加过力
+            if (isKicking && !hasAppliedForce && IsFootCollidingWithDefaultLayer())
+            {
+                // 给玩家角色施加向上的力
+                playerRigidbody.AddForce(Vector3.up * kickForce, ForceMode.Impulse);
+                //Debug.Log("弹射了");
+                hasAppliedForce = true; // 标记已经施加过力
+            }
+
             yield return null;
         }
 
         transform.localPosition = targetPosition;
-
-        // 如果是蹬腿动作并且脚部与地面发生碰撞
-        if (isKicking && IsFootCollidingWithDefaultLayer())
-        {
-            // 给玩家角色施加向上的力
-            playerRigidbody.AddForce(Vector3.up * kickForce, ForceMode.Impulse);
-            Debug.Log("弹射了");
-        }
-
         isMoving = false;
     }
 
@@ -76,5 +78,17 @@ public class LegKickController : MonoBehaviour
         // 检测脚部Collider是否与Default层的物体发生碰撞
         Vector3 footPosition = transform.position; // 假设脚部位置为当前GameObject的位置
         return Physics.CheckSphere(footPosition, checkRadius, defaultLayerMask);
+    }
+
+    void OnDrawGizmos()
+    {
+        // 设置 Gizmo 颜色
+        Gizmos.color = Color.yellow;
+
+        // 假设脚部位置为当前GameObject的位置
+        Vector3 footPosition = transform.position;
+
+        // 绘制一个球体来表示 CheckSphere 的范围
+        Gizmos.DrawWireSphere(footPosition, checkRadius);
     }
 }

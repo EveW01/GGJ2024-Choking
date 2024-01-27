@@ -11,10 +11,10 @@ public class ArmSync : MonoBehaviour
         if (syncTarget != null)
         {
             // 获取目标对象的本地坐标
-            Vector3 targetLocalPosition = syncTarget.transform.localPosition;
+            Vector3 targetPosition = syncTarget.transform.position;
 
             // 设置当前对象的本地坐标
-            transform.localPosition = new Vector3(transform.localPosition.x, targetLocalPosition.y, targetLocalPosition.z);
+            transform.position = new Vector3(transform.position.x, targetPosition.y, targetPosition.z);
         }
     }
 }

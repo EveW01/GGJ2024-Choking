@@ -11,6 +11,12 @@ public class AudioVolumeManager : MonoBehaviour
     public Slider musicVolumeSlider;
     public Slider soundVolumeSlider;
 
+    public Image musicHandle;
+    public Image soundHandle;
+
+    public Sprite trueVolume;
+    public Sprite falseVolume;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -30,6 +36,15 @@ public class AudioVolumeManager : MonoBehaviour
     {
         gameSettings.musicVolume = value;
         // Update the music volume in your game
+
+        if (value <= 0.01f)
+        {
+            musicHandle.sprite = falseVolume;
+        }
+        else
+        {
+            musicHandle.sprite = trueVolume;
+        }
     }
 
     void OnSoundVolumeChanged(float value)
@@ -37,5 +52,14 @@ public class AudioVolumeManager : MonoBehaviour
         gameSettings.soundVolume = value;
         // Update the sound effects volume in your game
         SFXPlayer.instance.sfxVolume = value;
+
+        if (value <= 0.01f)
+        {
+            soundHandle.sprite = falseVolume;
+        }
+        else
+        {
+            soundHandle.sprite = trueVolume;
+        }
     }
 }

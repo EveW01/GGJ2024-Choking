@@ -18,6 +18,11 @@ public class InGameManager : MonoBehaviour
 
     public GameObject playerArmAnchor;
 
+    private void Start()
+    {
+        StartTimeCount();
+    }
+
     void Update()
     {
         if (isCounting)
@@ -94,6 +99,11 @@ public class InGameManager : MonoBehaviour
         Time.timeScale = 1; // ¼ÌÐøÓÎÏ·
 
         playerArmAnchor.SetActive(true);
+    }
+
+    public void LoadStartScene()
+    {
+        SceneManager.LoadScene(0);
     }
 
     public void ReloadCurrentScene()
