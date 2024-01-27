@@ -14,7 +14,7 @@ public class ArmSync : MonoBehaviour
             Vector3 targetPosition = syncTarget.transform.position;
 
             // 设置当前对象的世界坐标
-            transform.position = new Vector3(-targetPosition.x, targetPosition.y, targetPosition.z);
+            transform.position = new Vector3(transform.position.x, targetPosition.y, targetPosition.z);
         }
     }
 }

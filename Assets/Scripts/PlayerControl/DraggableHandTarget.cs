@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class DraggableHandTarget : MonoBehaviour
 {
@@ -8,6 +9,8 @@ public class DraggableHandTarget : MonoBehaviour
     private Vector3 offset;
     private bool isDragging = false;
     private Vector3 originalLocalPosition;
+
+
 
     void Start()
     {
