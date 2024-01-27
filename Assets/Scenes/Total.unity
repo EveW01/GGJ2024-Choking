@@ -5579,6 +5579,7 @@ GameObject:
   - component: {fileID: 1319844149}
   - component: {fileID: 1319844148}
   - component: {fileID: 1319844151}
+  - component: {fileID: 1319844152}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -5704,6 +5705,23 @@ MonoBehaviour:
     mipBias: 0
     varianceClampScale: 0.9
     contrastAdaptiveSharpening: 0
+--- !u!320 &1319844152
+PlayableDirector:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1319844147}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_PlayableAsset: {fileID: 11400000, guid: 5032387ac48de4e419a8959218940420, type: 2}
+  m_InitialState: 1
+  m_WrapMode: 2
+  m_DirectorUpdateMode: 1
+  m_InitialTime: 0
+  m_SceneBindings: []
+  m_ExposedReferences:
+    m_References: []
 --- !u!1001 &1330545704
 PrefabInstance:
   m_ObjectHideFlags: 0
