@@ -10,7 +10,10 @@ public class DraggableHandTarget : MonoBehaviour
     private bool isDragging = false;
     private Vector3 originalLocalPosition;
 
-
+    [Header("UI提示")]
+    public Image dragHintCircle;
+    public Sprite normalHint;
+    public Sprite highlightHint;
 
     void Start()
     {
@@ -20,10 +23,23 @@ public class DraggableHandTarget : MonoBehaviour
 
     void Update()
     {
+        if (IsMouseOver())
+        {
+            dragHintCircle.sprite = highlightHint;
+        }
+        else
+        {
+            dragHintCircle.sprite = normalHint;
+        }
+
+
+
         // 检测鼠标左键按下
         if (Input.GetMouseButtonDown(0) && IsMouseOver())
         {
             StartDragging();
+
+            dragHintCircle.color = Color.green;
         }
 
         // 当鼠标左键被按住时，更新位置
@@ -36,6 +52,8 @@ public class DraggableHandTarget : MonoBehaviour
         if (Input.GetMouseButtonUp(0) && isDragging)
         {
             StopDragging();
+
+            dragHintCircle.color = Color.white;
         }
     }
 
