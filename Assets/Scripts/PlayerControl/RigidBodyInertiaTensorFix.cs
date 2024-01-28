@@ -21,6 +21,11 @@ public class RigidBodyInertiaTensorFix : MonoBehaviour
         rb.inertiaTensorRotation = Quaternion.identity;
 
         // Optionally, set the inertia tensor to a specific value if needed
-        rb.inertiaTensor = new Vector3(1, 1, 1); // Example value
+        rb.inertiaTensor = new Vector3(1, 1, 0); // Example value
+    }
+
+    private void LateUpdate()
+    {
+        ResetInertiaTensor();
     }
 }

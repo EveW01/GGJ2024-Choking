@@ -64,7 +64,8 @@ public class LegKickController : MonoBehaviour
             if (isKicking && !hasAppliedForce && IsFootCollidingWithDefaultLayer())
             {
                 // 计算力的方向
-                Vector3 forceDirection = Vector3.Lerp(forceDirectionSkeleton.forward, Vector3.up, 0.5f);
+                Vector3 forceDirection = forceDirectionSkeleton.forward; // 使用骨骼的前方向作为力的方向
+
 
                 // 给玩家角色施加力
                 playerRigidbody.AddForce(forceDirection * kickForce, ForceMode.Impulse);

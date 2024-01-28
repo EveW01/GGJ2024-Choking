@@ -13234,7 +13234,12 @@ PrefabInstance:
     - target: {fileID: 3989338780502816467, guid: 70ca050092b5e9a40a456abe2ea3d22c,
         type: 3}
       propertyPath: forceMagnitude
-      value: 200
+      value: 40
+      objectReference: {fileID: 0}
+    - target: {fileID: 3989338780502816467, guid: 70ca050092b5e9a40a456abe2ea3d22c,
+        type: 3}
+      propertyPath: handColliderRigidbody
+      value: 
       objectReference: {fileID: 0}
     - target: {fileID: 4183292602591846562, guid: 70ca050092b5e9a40a456abe2ea3d22c,
         type: 3}
@@ -13324,7 +13329,7 @@ PrefabInstance:
     - target: {fileID: 7782115285970669343, guid: 70ca050092b5e9a40a456abe2ea3d22c,
         type: 3}
       propertyPath: kickForce
-      value: 60
+      value: 80
       objectReference: {fileID: 0}
     - target: {fileID: 7782115285970669343, guid: 70ca050092b5e9a40a456abe2ea3d22c,
         type: 3}
@@ -13359,7 +13364,7 @@ PrefabInstance:
     - target: {fileID: 8288076865975507899, guid: 70ca050092b5e9a40a456abe2ea3d22c,
         type: 3}
       propertyPath: m_AngularDrag
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8921078972090453932, guid: 70ca050092b5e9a40a456abe2ea3d22c,
         type: 3}
@@ -13370,6 +13375,8 @@ PrefabInstance:
     - {fileID: 5684691835353124306, guid: 70ca050092b5e9a40a456abe2ea3d22c, type: 3}
     - {fileID: 4865783019728793646, guid: 70ca050092b5e9a40a456abe2ea3d22c, type: 3}
     - {fileID: 6873393343849949033, guid: 70ca050092b5e9a40a456abe2ea3d22c, type: 3}
+    - {fileID: 8820319849378834211, guid: 70ca050092b5e9a40a456abe2ea3d22c, type: 3}
+    - {fileID: 7296474416214514222, guid: 70ca050092b5e9a40a456abe2ea3d22c, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects:
     - targetCorrespondingSourceObject: {fileID: 636616043151301154, guid: 70ca050092b5e9a40a456abe2ea3d22c,
@@ -14042,7 +14049,7 @@ PrefabInstance:
     - target: {fileID: 7161393446263712704, guid: 5a703dec8f6a0084598491fa5cb2e89a,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 14.831185
+      value: 13.01
       objectReference: {fileID: 0}
     - target: {fileID: 7161393446263712704, guid: 5a703dec8f6a0084598491fa5cb2e89a,
         type: 3}
@@ -14052,12 +14059,12 @@ PrefabInstance:
     - target: {fileID: 7161393446263712704, guid: 5a703dec8f6a0084598491fa5cb2e89a,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: 22.988844
+      value: 22.99
       objectReference: {fileID: 0}
     - target: {fileID: 7161393446263712704, guid: 5a703dec8f6a0084598491fa5cb2e89a,
         type: 3}
       propertyPath: m_LocalRotation.w
-      value: 1
+      value: 0.7072824
       objectReference: {fileID: 0}
     - target: {fileID: 7161393446263712704, guid: 5a703dec8f6a0084598491fa5cb2e89a,
         type: 3}
@@ -14067,7 +14074,7 @@ PrefabInstance:
     - target: {fileID: 7161393446263712704, guid: 5a703dec8f6a0084598491fa5cb2e89a,
         type: 3}
       propertyPath: m_LocalRotation.y
-      value: -0
+      value: -0.7069311
       objectReference: {fileID: 0}
     - target: {fileID: 7161393446263712704, guid: 5a703dec8f6a0084598491fa5cb2e89a,
         type: 3}
@@ -14082,7 +14089,7 @@ PrefabInstance:
     - target: {fileID: 7161393446263712704, guid: 5a703dec8f6a0084598491fa5cb2e89a,
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.y
-      value: 90
+      value: -89.972
       objectReference: {fileID: 0}
     - target: {fileID: 7161393446263712704, guid: 5a703dec8f6a0084598491fa5cb2e89a,
         type: 3}
@@ -14774,7 +14781,7 @@ PrefabInstance:
     - target: {fileID: 8418688951026373646, guid: f2ca053651a244d4396994b1081d6382,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 14.874583
+      value: 12.846
       objectReference: {fileID: 0}
     - target: {fileID: 8418688951026373646, guid: f2ca053651a244d4396994b1081d6382,
         type: 3}
@@ -14784,7 +14791,7 @@ PrefabInstance:
     - target: {fileID: 8418688951026373646, guid: f2ca053651a244d4396994b1081d6382,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: 24.890018
+      value: 24.89
       objectReference: {fileID: 0}
     - target: {fileID: 8418688951026373646, guid: f2ca053651a244d4396994b1081d6382,
         type: 3}
