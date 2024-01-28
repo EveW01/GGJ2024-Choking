@@ -1211,22 +1211,22 @@ PrefabInstance:
     - target: {fileID: -8679921383154817045, guid: e4b8197cfc6a152408f81283d2d51387,
         type: 3}
       propertyPath: m_RootOrder
-      value: 3
+      value: 12
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: e4b8197cfc6a152408f81283d2d51387,
         type: 3}
       propertyPath: m_LocalScale.x
-      value: 2
+      value: 2.5
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: e4b8197cfc6a152408f81283d2d51387,
         type: 3}
       propertyPath: m_LocalScale.y
-      value: 2
+      value: 2.5
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: e4b8197cfc6a152408f81283d2d51387,
         type: 3}
       propertyPath: m_LocalScale.z
-      value: 2
+      value: 2.5
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: e4b8197cfc6a152408f81283d2d51387,
         type: 3}
@@ -1236,12 +1236,12 @@ PrefabInstance:
     - target: {fileID: -8679921383154817045, guid: e4b8197cfc6a152408f81283d2d51387,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 1.94
+      value: -1.78
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: e4b8197cfc6a152408f81283d2d51387,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: -3
+      value: -35.08
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: e4b8197cfc6a152408f81283d2d51387,
         type: 3}
@@ -1686,11 +1686,11 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: -1781356600409242780, guid: e4b8197cfc6a152408f81283d2d51387,
         type: 3}
       insertIndex: -1
-      addedObject: {fileID: 6085873364930346595}
+      addedObject: {fileID: 5153633348734765839}
     - targetCorrespondingSourceObject: {fileID: -1781356600409242780, guid: e4b8197cfc6a152408f81283d2d51387,
         type: 3}
       insertIndex: -1
-      addedObject: {fileID: 5153633348734765839}
+      addedObject: {fileID: 4482921674336888897}
     - targetCorrespondingSourceObject: {fileID: -9070493210130169274, guid: e4b8197cfc6a152408f81283d2d51387,
         type: 3}
       insertIndex: -1
@@ -2589,8 +2589,23 @@ GameObject:
     type: 3}
   m_PrefabInstance: {fileID: 4040054385107591908}
   m_PrefabAsset: {fileID: 0}
---- !u!65 &6085873364930346595
-BoxCollider:
+--- !u!114 &5153633348734765839
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6869803156832231808}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 276e952075af49244b6cc648ec8aecd7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  audioClips:
+  - {fileID: 8300000, guid: 78671352b4d05fd44a7fa2436b419a6d, type: 3}
+  - {fileID: 8300000, guid: 5798b5623bd737a45b57e18745c337e0, type: 3}
+--- !u!136 &4482921674336888897
+CapsuleCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -2607,24 +2622,11 @@ BoxCollider:
   m_IsTrigger: 0
   m_ProvidesContacts: 0
   m_Enabled: 1
-  serializedVersion: 3
-  m_Size: {x: 0.1253145, y: 0.21762806, z: 0.14380763}
-  m_Center: {x: 7.638603e-12, y: 0.062368106, z: 0.034671918}
---- !u!114 &5153633348734765839
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6869803156832231808}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 276e952075af49244b6cc648ec8aecd7, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  audioClips:
-  - {fileID: 8300000, guid: 78671352b4d05fd44a7fa2436b419a6d, type: 3}
-  - {fileID: 8300000, guid: 5798b5623bd737a45b57e18745c337e0, type: 3}
+  serializedVersion: 2
+  m_Radius: 0.10543889
+  m_Height: 0.2436848
+  m_Direction: 1
+  m_Center: {x: 7.912924e-12, y: 0.06453007, z: 0.030632474}
 --- !u!4 &7033977437960917578 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -2770666803903516498, guid: e4b8197cfc6a152408f81283d2d51387,

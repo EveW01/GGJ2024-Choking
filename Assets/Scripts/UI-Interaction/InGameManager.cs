@@ -18,6 +18,13 @@ public class InGameManager : MonoBehaviour
 
     public GameObject playerArmAnchor;
 
+    public AudioClip buttonClickSound;
+    public AudioClip chokeFailVoice;
+    public AudioClip successSound;
+
+    public Image photo; // 引用 Image 组件
+    public Color chokePurpleColor; // 目标颜色
+
     private void Start()
     {
         StartTimeCount();
@@ -66,6 +73,8 @@ public class InGameManager : MonoBehaviour
 
         // 更新进度条
         timeCountProgressBar.fillAmount = currentTime / timeLimit;
+        // 更新 photo 的颜色
+        photo.color = Color.Lerp(Color.white, chokePurpleColor, 1 - (currentTime / timeLimit));
     }
 
     public void EnterPause()
@@ -73,6 +82,8 @@ public class InGameManager : MonoBehaviour
         pausePanel.SetActive(true);
 
         playerArmAnchor.SetActive(false);
+
+        SFXPlayer.instance.PlaySound(buttonClickSound);
     }
 
     public void EnterGameOver()
@@ -80,6 +91,8 @@ public class InGameManager : MonoBehaviour
         gameOverPanel.SetActive(true);
 
         playerArmAnchor.SetActive(false);
+
+        SFXPlayer.instance.PlaySound(chokeFailVoice);
     }
 
     public void EnterGameVictory()
@@ -87,6 +100,8 @@ public class InGameManager : MonoBehaviour
         victoryPanel.SetActive(true);
 
         playerArmAnchor.SetActive(false);
+
+        SFXPlayer.instance.PlaySound(successSound);
     }
 
     public void PauseGame()
@@ -99,6 +114,8 @@ public class InGameManager : MonoBehaviour
         Time.timeScale = 1; // 继续游戏
 
         playerArmAnchor.SetActive(true);
+
+        SFXPlayer.instance.PlaySound(buttonClickSound);
     }
 
     public void LoadStartScene()
@@ -106,6 +123,13 @@ public class InGameManager : MonoBehaviour
         SceneManager.LoadScene(0);
 
         Time.timeScale = 1;
+
+        SFXPlayer.instance.PlaySound(buttonClickSound);
+    }
+
+    public void PlayClickSound()
+    {
+        SFXPlayer.instance.PlaySound(buttonClickSound);
     }
 
     public void ReloadCurrentScene()
@@ -117,5 +141,7 @@ public class InGameManager : MonoBehaviour
 
         // 重新加载当前场景
         SceneManager.LoadScene(currentSceneName);
+
+        SFXPlayer.instance.PlaySound(buttonClickSound);
     }
 }
