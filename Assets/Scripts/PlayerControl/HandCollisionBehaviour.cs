@@ -14,7 +14,7 @@ public class HandCollisionBehaviour : MonoBehaviour
     void OnCollisionEnter(Collision collision)
     {
         // 检查是否与标记为 'Default' 的物体发生碰撞
-        if (collision.gameObject.CompareTag("Default"))
+        if (collision.gameObject.CompareTag("Environment"))
         {
             Debug.Log("Speed:" + handColliderRigidbody.velocity.magnitude);
 

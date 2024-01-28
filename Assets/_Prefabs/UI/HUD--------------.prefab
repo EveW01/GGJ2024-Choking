@@ -2375,7 +2375,7 @@ Transform:
   m_Children:
   - {fileID: 3306023951251255967}
   m_Father: {fileID: 0}
-  m_RootOrder: 13
+  m_RootOrder: 9
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &8702025513044299067
 MonoBehaviour:
@@ -2394,7 +2394,7 @@ MonoBehaviour:
   pausePanel: {fileID: 5170744738180029489}
   gameOverPanel: {fileID: 3399795320345293950}
   victoryPanel: {fileID: 3332588613701607581}
-  timeLimit: 60
+  timeLimit: 120
   playerArmAnchor: {fileID: 0}
 --- !u!1 &4127850988078854624
 GameObject:
