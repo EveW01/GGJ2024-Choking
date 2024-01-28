@@ -4,20 +4,20 @@ using UnityEngine;
 
 public class LegKickController : MonoBehaviour
 {
-    public GameObject startPositionObject; // Ìá¹©ÆðÊ¼Î»ÖÃµÄ¿ÕGameObject
-    public float moveDuration = 0.06f; // ÒÆ¶¯³ÖÐøÊ±¼ä
-    public Rigidbody playerRigidbody; // Íæ¼Ò½ÇÉ«µÄRigidbody
-    public float kickForce = 10f; // µÅÍÈÊ©¼ÓµÄÁ¦
+    public GameObject startPositionObject; // ï¿½á¹©ï¿½ï¿½Ê¼Î»ï¿½ÃµÄ¿ï¿½GameObject
+    public float moveDuration = 0.06f; // ï¿½Æ¶ï¿½ï¿½ï¿½ï¿½ï¿½Ê±ï¿½ï¿½
+    public Rigidbody playerRigidbody; // ï¿½ï¿½Ò½ï¿½É«ï¿½ï¿½Rigidbody
+    public float kickForce = 10f; // ï¿½ï¿½ï¿½ï¿½Ê©ï¿½Óµï¿½ï¿½ï¿½
     private Vector3 startPosition;
-    private Vector3 endPosition = Vector3.zero; // Ä¿±êÎ»ÖÃ
-    private bool isMoving = false; // ÒÆ¶¯±êÖ¾
+    private Vector3 endPosition = Vector3.zero; // Ä¿ï¿½ï¿½Î»ï¿½ï¿½
+    private bool isMoving = false; // ï¿½Æ¶ï¿½ï¿½ï¿½Ö¾
 
-    public float checkRadius = 0.5f; // ¼ì²âÇòÌåµÄ°ë¾¶
-    public LayerMask defaultLayerMask; // Default²ãµÄLayerMask
+    public float checkRadius = 0.5f; // ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ä°ë¾¶
+    public LayerMask defaultLayerMask; // Defaultï¿½ï¿½ï¿½LayerMask
 
     void Start()
     {
-        // È·±£Ìá¹©ÁËÆðÊ¼Î»ÖÃ¶ÔÏó
+        // È·ï¿½ï¿½ï¿½á¹©ï¿½ï¿½ï¿½ï¿½Ê¼Î»ï¿½Ã¶ï¿½ï¿½ï¿½
         if (startPositionObject != null)
         {
             startPosition = startPositionObject.transform.localPosition;
@@ -31,13 +31,13 @@ public class LegKickController : MonoBehaviour
 
     void Update()
     {
-        // ¼ì²âÊó±êÓÒ¼ü°´ÏÂ
+        // ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ò¼ï¿½ï¿½ï¿½ï¿½ï¿½
         if (Input.GetMouseButtonDown(1) && !isMoving)
         {
             StartCoroutine(MoveToPosition(endPosition));
         }
 
-        // ¼ì²âÊó±êÓÒ¼üÊÍ·Å
+        // ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ò¼ï¿½ï¿½Í·ï¿½
         if (Input.GetMouseButtonUp(1))
         {
             StartCoroutine(MoveToPosition(startPosition));
@@ -49,21 +49,22 @@ public class LegKickController : MonoBehaviour
         isMoving = true;
         float elapsedTime = 0;
         Vector3 originalPosition = transform.localPosition;
-        bool isKicking = targetPosition == endPosition; // ÅÐ¶ÏÊÇ·ñÎªµÅÍÈ¶¯×÷
-        bool hasAppliedForce = false; // ÊÇ·ñÒÑ¾­Ê©¼Ó¹ýÁ¦
+        bool isKicking = targetPosition == endPosition; // ï¿½Ð¶ï¿½ï¿½Ç·ï¿½Îªï¿½ï¿½ï¿½È¶ï¿½ï¿½ï¿½
+        bool hasAppliedForce = false; // ï¿½Ç·ï¿½ï¿½Ñ¾ï¿½Ê©ï¿½Ó¹ï¿½ï¿½ï¿½
 
         while (elapsedTime < moveDuration)
         {
             transform.localPosition = Vector3.Lerp(originalPosition, targetPosition, (elapsedTime / moveDuration));
             elapsedTime += Time.deltaTime;
 
-            // Èç¹ûÊÇµÅÍÈ¶¯×÷²¢ÇÒ½Å²¿ÓëµØÃæ·¢ÉúÅö×²£¬ÇÒÉÐÎ´Ê©¼Ó¹ýÁ¦
+            // ï¿½ï¿½ï¿½ï¿½Çµï¿½ï¿½È¶ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ò½Å²ï¿½ï¿½ï¿½ï¿½ï¿½æ·¢ï¿½ï¿½ï¿½ï¿½×²ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Î´Ê©ï¿½Ó¹ï¿½ï¿½ï¿½
             if (isKicking && !hasAppliedForce && IsFootCollidingWithDefaultLayer())
             {
-                // ¸øÍæ¼Ò½ÇÉ«Ê©¼ÓÏòÉÏµÄÁ¦
+                // ï¿½ï¿½ï¿½ï¿½Ò½ï¿½É«Ê©ï¿½ï¿½ï¿½ï¿½ï¿½Ïµï¿½ï¿½ï¿½
                 playerRigidbody.AddForce(Vector3.up * kickForce, ForceMode.Impulse);
-                //Debug.Log("µ¯ÉäÁË");
-                hasAppliedForce = true; // ±ê¼ÇÒÑ¾­Ê©¼Ó¹ýÁ¦
+                playerRigidbody.AddForce(Vector3.right * kickForce, ForceMode.Impulse);
+                //Debug.Log("ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½");
+                hasAppliedForce = true; // ï¿½ï¿½ï¿½ï¿½Ñ¾ï¿½Ê©ï¿½Ó¹ï¿½ï¿½ï¿½
             }
 
             yield return null;
@@ -75,20 +76,20 @@ public class LegKickController : MonoBehaviour
 
     private bool IsFootCollidingWithDefaultLayer()
     {
-        // ¼ì²â½Å²¿ColliderÊÇ·ñÓëDefault²ãµÄÎïÌå·¢ÉúÅö×²
-        Vector3 footPosition = transform.position; // ¼ÙÉè½Å²¿Î»ÖÃÎªµ±Ç°GameObjectµÄÎ»ÖÃ
+        // ï¿½ï¿½ï¿½Å²ï¿½Colliderï¿½Ç·ï¿½ï¿½ï¿½Defaultï¿½ï¿½ï¿½ï¿½ï¿½ï¿½å·¢ï¿½ï¿½ï¿½ï¿½×²
+        Vector3 footPosition = transform.position; // ï¿½ï¿½ï¿½ï¿½Å²ï¿½Î»ï¿½ï¿½Îªï¿½ï¿½Ç°GameObjectï¿½ï¿½Î»ï¿½ï¿½
         return Physics.CheckSphere(footPosition, checkRadius, defaultLayerMask);
     }
 
     void OnDrawGizmos()
     {
-        // ÉèÖÃ Gizmo ÑÕÉ«
+        // ï¿½ï¿½ï¿½ï¿½ Gizmo ï¿½ï¿½É«
         Gizmos.color = Color.yellow;
 
-        // ¼ÙÉè½Å²¿Î»ÖÃÎªµ±Ç°GameObjectµÄÎ»ÖÃ
+        // ï¿½ï¿½ï¿½ï¿½Å²ï¿½Î»ï¿½ï¿½Îªï¿½ï¿½Ç°GameObjectï¿½ï¿½Î»ï¿½ï¿½
         Vector3 footPosition = transform.position;
 
-        // »æÖÆÒ»¸öÇòÌåÀ´±íÊ¾ CheckSphere µÄ·¶Î§
+        // ï¿½ï¿½ï¿½ï¿½Ò»ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ê¾ CheckSphere ï¿½Ä·ï¿½Î§
         Gizmos.DrawWireSphere(footPosition, checkRadius);
     }
 }
