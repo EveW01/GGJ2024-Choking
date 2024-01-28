@@ -12,6 +12,8 @@ public class CameraFollow : MonoBehaviour
     private Vector3 offset; // 摄像机相对于玩家的偏移量
     private Vector3 velocity = Vector3.zero; // 用于SmoothDamp的速度
 
+    public float maxY = 2.1f; // Y轴高度的最大值
+
     void Start()
     {
         // 计算初始偏移量
@@ -34,6 +36,9 @@ public class CameraFollow : MonoBehaviour
         // 更新摄像机位置
         Quaternion rotation = Quaternion.Euler(0, currentRotation, 0);
         Vector3 targetPosition = player.position + rotation * offset;
+
+        // 限制 Y 轴高度
+        targetPosition.y = Mathf.Min(targetPosition.y, maxY);
 
         // 应用阻尼效果
         transform.position = Vector3.SmoothDamp(transform.position, targetPosition, ref velocity, damping);
