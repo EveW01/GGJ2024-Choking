@@ -294,6 +294,7 @@ GameObject:
   - component: {fileID: 1976264534085860517}
   - component: {fileID: 5175379889056349627}
   - component: {fileID: 5539835675115369002}
+  - component: {fileID: 2935499494189926740}
   m_Layer: 7
   m_Name: ColaItem
   m_TagString: Untagged
@@ -316,7 +317,7 @@ Transform:
   - {fileID: 5283204390803114365}
   - {fileID: 5316550013445481749}
   m_Father: {fileID: 0}
-  m_RootOrder: 0
+  m_RootOrder: -1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!65 &5175379889056349627
 BoxCollider:
@@ -354,6 +355,18 @@ MonoBehaviour:
   MoveSpeed: 0.25
   MoveDistance: 0.5
   RotationSpeed: 50
+--- !u!114 &2935499494189926740
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8781235648474730821}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2aac96cbbdc2d0c4ab315b821b6292c8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &8873485575618799159
 GameObject:
   m_ObjectHideFlags: 0

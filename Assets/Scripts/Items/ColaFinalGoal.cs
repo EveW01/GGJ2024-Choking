@@ -6,6 +6,8 @@ public class ColaFinalGoal : MonoBehaviour
 {
     private InGameManager gameManager;
 
+    private bool hasEntered;
+
     private void Start()
     {
         gameManager = FindObjectOfType<InGameManager>();
@@ -13,9 +15,13 @@ public class ColaFinalGoal : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        if (other.gameObject.CompareTag("Player"))
+        if (!hasEntered)
         {
-            gameManager.EnterGameVictory();
+            if (other.gameObject.CompareTag("Player"))
+            {
+                gameManager.EnterGameVictory();
+                hasEntered = true;
+            }
         }
     }
 }
