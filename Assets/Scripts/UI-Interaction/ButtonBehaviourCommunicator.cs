@@ -8,6 +8,9 @@ public class ButtonBehaviourCommunicator : MonoBehaviour
 
     public void PauseGame()
     {
-        gameManager.PauseGame();
+        if (gameManager != null)
+        {
+            gameManager.PauseGame();
+        }
     }
 }
