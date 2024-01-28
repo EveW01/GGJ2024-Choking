@@ -6,7 +6,7 @@ public class ArmSync : MonoBehaviour
 {
     public GameObject syncTarget; // 同步目标对象
 
-    void Update()
+    void FixedUpdate()
     {
         if (syncTarget != null)
         {

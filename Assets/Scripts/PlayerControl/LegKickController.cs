@@ -17,6 +17,8 @@ public class LegKickController : MonoBehaviour
 
     public Transform forceDirectionSkeleton; // 参考人体骨骼的Transform
 
+    public AudioClip kickSound;
+
     void Start()
     {
         // ȷ���ṩ����ʼλ�ö���
@@ -62,12 +64,14 @@ public class LegKickController : MonoBehaviour
             if (isKicking && !hasAppliedForce && IsFootCollidingWithDefaultLayer())
             {
                 // 计算力的方向
-                Vector3 forceDirection = forceDirectionSkeleton.forward; // 使用骨骼的前方向作为力的方向
+                Vector3 forceDirection = Vector3.Lerp(forceDirectionSkeleton.forward, Vector3.up, 0.5f);
 
                 // 给玩家角色施加力
                 playerRigidbody.AddForce(forceDirection * kickForce, ForceMode.Impulse);
                 //Debug.Log("弹射了");
                 hasAppliedForce = true; // 标记已经施加过力
+
+                SFXPlayer.instance.PlaySound(kickSound);
             }
 
 
