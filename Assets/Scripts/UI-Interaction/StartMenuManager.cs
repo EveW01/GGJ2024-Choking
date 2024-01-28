@@ -12,6 +12,7 @@ public class StartMenuManager : MonoBehaviour
 
     public void StartGame()
     {
+        
         SceneManager.LoadScene(1);
         SFXPlayer.instance.PlaySound(buttonClikSound);
     }
