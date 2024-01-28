@@ -15,6 +15,8 @@ public class LegKickController : MonoBehaviour
     public float checkRadius = 0.5f; // �������İ뾶
     public LayerMask defaultLayerMask; // Default���LayerMask
 
+    public Transform forceDirectionSkeleton; // 参考人体骨骼的Transform
+
     void Start()
     {
         // ȷ���ṩ����ʼλ�ö���
@@ -57,15 +59,17 @@ public class LegKickController : MonoBehaviour
             transform.localPosition = Vector3.Lerp(originalPosition, targetPosition, (elapsedTime / moveDuration));
             elapsedTime += Time.deltaTime;
 
-            // ����ǵ��ȶ������ҽŲ�����淢����ײ������δʩ�ӹ���
             if (isKicking && !hasAppliedForce && IsFootCollidingWithDefaultLayer())
             {
-                // ����ҽ�ɫʩ�����ϵ���
-                playerRigidbody.AddForce(Vector3.up * kickForce, ForceMode.Impulse);
-                playerRigidbody.AddForce(Vector3.right * kickForce, ForceMode.Impulse);
-                //Debug.Log("������");
-                hasAppliedForce = true; // ����Ѿ�ʩ�ӹ���
+                // 计算力的方向
+                Vector3 forceDirection = forceDirectionSkeleton.forward; // 使用骨骼的前方向作为力的方向
+
+                // 给玩家角色施加力
+                playerRigidbody.AddForce(forceDirection * kickForce, ForceMode.Impulse);
+                //Debug.Log("弹射了");
+                hasAppliedForce = true; // 标记已经施加过力
             }
+
 
             yield return null;
         }

@@ -6,7 +6,7 @@ public class HandCollisionBehaviour : MonoBehaviour
 {
     public Rigidbody handColliderRigidbody; // 手部的 Rigidbody
     public Rigidbody playerRigidbody; // 玩家的 Rigidbody
-    public float speedThreshold = 5f; // 速度阈值
+    public const float speedThreshold = 3f; // 速度阈值
     public float forceMagnitude = 10f; // 施加的力的大小
 
 
@@ -16,7 +16,7 @@ public class HandCollisionBehaviour : MonoBehaviour
         // 检查是否与标记为 'Default' 的物体发生碰撞
         if (collision.gameObject.CompareTag("Environment"))
         {
-            Debug.Log("Speed:" + handColliderRigidbody.velocity.magnitude);
+
 
             // 检查手部的移动速度
             if (handColliderRigidbody.velocity.magnitude > speedThreshold)
@@ -26,6 +26,8 @@ public class HandCollisionBehaviour : MonoBehaviour
 
                 // 向玩家刚体施加力
                 playerRigidbody.AddForce(-forceDirection * forceMagnitude, ForceMode.Impulse);
+
+                Debug.Log("Arm Force Added");
             }
         }
     }
