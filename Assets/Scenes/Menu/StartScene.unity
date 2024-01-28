@@ -745,6 +745,7 @@ MonoBehaviour:
   rotationSpeed: 5
   rotationRange: {x: -30, y: 30}
   damping: 0.15
+  maxY: 2.1
 --- !u!1 &334320456
 GameObject:
   m_ObjectHideFlags: 0
@@ -2003,6 +2004,7 @@ MonoBehaviour:
   rotationSpeed: 5
   rotationRange: {x: -30, y: 30}
   damping: 0.15
+  maxY: 2.1
 --- !u!1 &915162107
 GameObject:
   m_ObjectHideFlags: 0
