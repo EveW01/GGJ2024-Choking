@@ -2130,7 +2130,7 @@ BoxCollider:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 364549928}
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 13400000, guid: 43aa6bf7e290a4443bee89271fd72cc3, type: 2}
   m_IncludeLayers:
     serializedVersion: 2
     m_Bits: 0
@@ -6220,7 +6220,7 @@ BoxCollider:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1100446071}
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 13400000, guid: 43aa6bf7e290a4443bee89271fd72cc3, type: 2}
   m_IncludeLayers:
     serializedVersion: 2
     m_Bits: 0
@@ -7276,6 +7276,11 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1664944550}
     m_Modifications:
+    - target: {fileID: 1322535914992878876, guid: af99204746d19734d800d773b5adda3d,
+        type: 3}
+      propertyPath: m_Mass
+      value: 10
+      objectReference: {fileID: 0}
     - target: {fileID: 2869752295087828747, guid: af99204746d19734d800d773b5adda3d,
         type: 3}
       propertyPath: m_Name
@@ -7283,13 +7288,8 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3213520839230240177, guid: af99204746d19734d800d773b5adda3d,
         type: 3}
-      propertyPath: m_LocalScale.x
-      value: 0.97575676
-      objectReference: {fileID: 0}
-    - target: {fileID: 3213520839230240177, guid: af99204746d19734d800d773b5adda3d,
-        type: 3}
-      propertyPath: m_LocalScale.z
-      value: 1.1033466
+      propertyPath: m_RootOrder
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 3213520839230240177, guid: af99204746d19734d800d773b5adda3d,
         type: 3}
@@ -9822,7 +9822,7 @@ BoxCollider:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1631984861}
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 13400000, guid: 43aa6bf7e290a4443bee89271fd72cc3, type: 2}
   m_IncludeLayers:
     serializedVersion: 2
     m_Bits: 0
@@ -10044,7 +10044,7 @@ BoxCollider:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1675241434}
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 13400000, guid: 43aa6bf7e290a4443bee89271fd72cc3, type: 2}
   m_IncludeLayers:
     serializedVersion: 2
     m_Bits: 0
@@ -10218,7 +10218,7 @@ BoxCollider:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1707270266}
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 13400000, guid: 43aa6bf7e290a4443bee89271fd72cc3, type: 2}
   m_IncludeLayers:
     serializedVersion: 2
     m_Bits: 0
@@ -11691,7 +11691,7 @@ BoxCollider:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1952555736}
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 13400000, guid: 43aa6bf7e290a4443bee89271fd72cc3, type: 2}
   m_IncludeLayers:
     serializedVersion: 2
     m_Bits: 0
@@ -11958,41 +11958,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: Player
       objectReference: {fileID: 0}
-    - target: {fileID: 4115477404969314825, guid: 70ca050092b5e9a40a456abe2ea3d22c,
-        type: 3}
-      propertyPath: m_Materials.Array.data[0]
-      value: 
-      objectReference: {fileID: 2100000, guid: 7d6c4dbd26f43d442986621e6d4b1141, type: 2}
-    - target: {fileID: 4115477404969314825, guid: 70ca050092b5e9a40a456abe2ea3d22c,
-        type: 3}
-      propertyPath: m_Materials.Array.data[1]
-      value: 
-      objectReference: {fileID: 2100000, guid: 7d6c4dbd26f43d442986621e6d4b1141, type: 2}
-    - target: {fileID: 4115477404969314825, guid: 70ca050092b5e9a40a456abe2ea3d22c,
-        type: 3}
-      propertyPath: m_Materials.Array.data[2]
-      value: 
-      objectReference: {fileID: 2100000, guid: 7d6c4dbd26f43d442986621e6d4b1141, type: 2}
-    - target: {fileID: 4115477404969314825, guid: 70ca050092b5e9a40a456abe2ea3d22c,
-        type: 3}
-      propertyPath: m_Materials.Array.data[3]
-      value: 
-      objectReference: {fileID: 2100000, guid: 7d6c4dbd26f43d442986621e6d4b1141, type: 2}
-    - target: {fileID: 4115477404969314825, guid: 70ca050092b5e9a40a456abe2ea3d22c,
-        type: 3}
-      propertyPath: m_Materials.Array.data[4]
-      value: 
-      objectReference: {fileID: 2100000, guid: 7d6c4dbd26f43d442986621e6d4b1141, type: 2}
-    - target: {fileID: 4115477404969314825, guid: 70ca050092b5e9a40a456abe2ea3d22c,
-        type: 3}
-      propertyPath: m_Materials.Array.data[5]
-      value: 
-      objectReference: {fileID: 2100000, guid: 7d6c4dbd26f43d442986621e6d4b1141, type: 2}
-    - target: {fileID: 4115477404969314825, guid: 70ca050092b5e9a40a456abe2ea3d22c,
-        type: 3}
-      propertyPath: m_Materials.Array.data[6]
-      value: 
-      objectReference: {fileID: 2100000, guid: 7d6c4dbd26f43d442986621e6d4b1141, type: 2}
     - target: {fileID: 4583416971556914447, guid: 70ca050092b5e9a40a456abe2ea3d22c,
         type: 3}
       propertyPath: m_RootOrder
@@ -12016,27 +11981,27 @@ PrefabInstance:
     - target: {fileID: 4583416971556914447, guid: 70ca050092b5e9a40a456abe2ea3d22c,
         type: 3}
       propertyPath: m_LocalRotation.w
-      value: 0.9483919
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4583416971556914447, guid: 70ca050092b5e9a40a456abe2ea3d22c,
         type: 3}
       propertyPath: m_LocalRotation.x
-      value: 0.31710082
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4583416971556914447, guid: 70ca050092b5e9a40a456abe2ea3d22c,
         type: 3}
       propertyPath: m_LocalRotation.y
-      value: -0
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4583416971556914447, guid: 70ca050092b5e9a40a456abe2ea3d22c,
         type: 3}
       propertyPath: m_LocalRotation.z
-      value: -0
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4583416971556914447, guid: 70ca050092b5e9a40a456abe2ea3d22c,
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
-      value: 36.975
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4583416971556914447, guid: 70ca050092b5e9a40a456abe2ea3d22c,
         type: 3}
